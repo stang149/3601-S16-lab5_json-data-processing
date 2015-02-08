@@ -21,6 +21,8 @@ You should add these as issues and milestones on your github repository to help 
 
 > As an administrator I would like to be able to display a list of all students, ordered by date of birth.
 
-> As an administrator I would like to ...
-
 > As an administrator I would like to view a list of students meeting various criteria such as Major, 
+
+> As an administrator I would like to view detailed information for an individual student. 
+
+
