@@ -1,7 +1,7 @@
 # jsonDataProcessingLab
 
 ## Using the generator to create your project
-Run: ``yo``
+Run: ``yo`` in your project's main directory...
 - Choose generator: ``Angular Fullstack``
 - Choose Scripting Language: ``Javascript``
 - Choose markup Language: ``HTML``
