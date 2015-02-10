@@ -12,6 +12,7 @@
 
 ## Using the generator to create your project
 We are using yeoman generator: http://yeoman.io/generators/
+Specifically, the angular-fullstack generator: https://github.com/DaftMonk/generator-angular-fullstack
 
 Run: ``yo`` in your project's main directory...
 - Choose generator: ``Angular Fullstack``
