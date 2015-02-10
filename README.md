@@ -1,5 +1,15 @@
 # jsonDataProcessingLab
 
+## Setup
+- Fork this repository (so that it is easy for us to keep track of yoru work).
+- Add the initial list of user stories as issues. Prioritize and estimate your stories. 
+- Use the generator to generate your project (see below).
+- Make sure your applications is called "student". 
+- Move the seed.js into your config directory. 
+- Make sure that your .gitignore contains the .idea, mongo.js, etc. Use past .gitignore for reference. 
+- Once you have checked your .gitignore, add your project to the repsoitory and commit. 
+- You will be using your test database (just like we did last time). You will be using a read-only access on a different database for your production code. 
+
 ## Using the generator to create your project
 We are using yeoman generator: http://yeoman.io/generators/
 
