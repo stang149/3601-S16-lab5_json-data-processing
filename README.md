@@ -1,7 +1,7 @@
 # jsonDataProcessingLab
 
 ## Setup
-- Fork this repository (so that it is easy for us to keep track of yoru work).
+- Fork this repository (so that it is easy for us to keep track of your work).
 - Add the initial list of user stories as issues. Prioritize and estimate your stories. 
 - Use the generator to generate your project (see below).
 - Make sure your applications is called "student". 
