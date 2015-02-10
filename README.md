@@ -1,6 +1,8 @@
 # jsonDataProcessingLab
 
 ## Using the generator to create your project
+We are using yeoman generator: http://yeoman.io/generators/
+
 Run: ``yo`` in your project's main directory...
 - Choose generator: ``Angular Fullstack``
 - Choose Scripting Language: ``Javascript``
