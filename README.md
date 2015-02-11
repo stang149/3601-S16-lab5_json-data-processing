@@ -51,4 +51,79 @@ You should add these as issues and milestones on your github repository to help 
 
 > As an administrator, I would like to search student records based on courses that they are taking or have taken. 
 
+## Switching to production mode with a remote database
+The files that need to be modified: 
 
+- server-side app.js: change the line 
+```javascript
+serveClient: (config.env === 'production') ? false : true,
+```
+to
+```javascript
+serveClient: true,
+```
+- add the following new task to Gruntfile.js, after the other registered tasks:
+```javascipt
+  grunt.registerTask('serveProd', function (target) {
+    grunt.task.run([
+      'clean:server',
+      'env:prod',
+      'concurrent:server',
+      'injector',
+      'wiredep',
+      'autoprefixer',
+      'express:dev',
+      'wait',
+      'open',
+      'watch'
+    ]);
+  });
+```
+This will adda  new task `serveProd` to your grunt tasks, so you will be able to run it from the grunt menu, just like `serve`. 
+- change express.js as follows:
+in the `if` statement
+```javascript 
+if ('production' === env)
+```
+replace the lines
+```javascript 
+    app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
+    app.use(express.static(path.join(config.root, 'public')));
+    app.set('appPath', config.root + '/public');
+    app.use(morgan('dev'));
+```
+with
+```javascript 
+    app.use(require('connect-livereload')());
+    app.use(express.static(path.join(config.root, '.tmp')));
+    app.use(express.static(path.join(config.root, 'client')));
+    app.set('appPath', 'client');
+    app.use(morgan('dev'));
+    app.use(errorHandler()); // Error handler - has to be last
+```
+- change the file production.js in `/server/config/environment` to look a s follows (but note that the password will be different from `passwordToBeProvided`, it will be sent to you in the google group!)
+```javascript 
+'use strict';
+
+// Production specific configuration
+// =================================
+module.exports = {
+  //// Server IP
+  //ip:       process.env.OPENSHIFT_NODEJS_IP ||
+  //          process.env.IP ||
+  //          undefined,
+  //
+  //// Server port
+  //port:     process.env.OPENSHIFT_NODEJS_PORT ||
+  //          process.env.PORT ||
+  //          8080,
+
+  // MongoDB connection options
+  mongo: {
+    uri: 'mongodb://3601Lab:SoftwareDevelopment@acrylic/passwordToBeProvided/?authSource=admin'
+  }
+};
+```
+Make sure that your production.js is in .gitignore before entering the actual password. 
+
+Once you have made all the changes, you should be able to run the production version by double-clicking on `serveProd` in the list of grunt tasks. **Important:** make sure to stop the `serve` task before starting the `serveProd` task. Note that you can alternate between the development task (with the test database) and the production task (with the remote database). The advantage of the test database is that you can change data in it to test for specific cases.   
