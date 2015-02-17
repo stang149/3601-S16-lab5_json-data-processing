@@ -27,6 +27,10 @@ Run: ``yo`` in your project's main directory...
 - Additional oAuth strategies (none, just hit enter)
 - Use Socket.io = ``yes``
 
+## Using generators to add routes to your project
+Do not add routes (i.e. html and Javascript files) by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
+
+
 ## Sample data
 You are provided with sample data that can be used to initialize your test database. Place this file into the/server/config/environment directory, and it will be used to seed your database.
 
