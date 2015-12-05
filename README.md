@@ -6,13 +6,16 @@
 - Use the generator to generate your project (see below).
 - Make sure your applications is called "student". 
 - Move the seed.js into your config directory. 
-- Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference. 
+- **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
 - Once you have checked your .gitignore, add your project to the repsoitory and commit. 
 - You will be using your test database (just like we did last time). You will be using a read-only access on a different database for your production code. 
 
 ## Using the generator to create your project
 We are using yeoman generator: http://yeoman.io/generators/
 Specifically, the angular-fullstack generator: https://github.com/DaftMonk/generator-angular-fullstack
+
+This generator will set up a new project for you with a directory structure quite similar to the one you've been using
+in previous labs, and will make it easier to manage adding new things to your project.
 
 Run: ``yo`` in your project's main directory...
 - Choose generator: ``Angular Fullstack``
