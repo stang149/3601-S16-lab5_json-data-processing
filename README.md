@@ -1,4 +1,4 @@
-# jsonDataProcessingLab
+# CSCI 3601 Lab #5 - Processing JSON data from Mongo
 
 ## Setup
 - Fork this repository (so that it is easy for us to keep track of your work).
