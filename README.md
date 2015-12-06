@@ -40,23 +40,23 @@ You are provided with sample data that can be used to initialize your test datab
 ## User Stories
 You should add these as issues and milestones on your github repository to help keep track of them.
 
-> As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name.
+- As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name.
 
-> As an administrator I would like to display a list of all students, ordered by date of birth.
+- As an administrator I would like to display a list of all students, ordered by date of birth.
 
-> As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses). 
+- As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses). 
 
-> As an administrator I would like to view a list of students based on their major(s).
+- As an administrator I would like to view a list of students based on their major(s).
 
-> As an administrator I would like to view detailed information for an individual student. 
+- As an administrator I would like to view detailed information for an individual student. 
 
-> As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses.
+- As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses.
 
-> As an administrator, I would like to display a list of students with their GPA. 
+- As an administrator, I would like to display a list of students with their GPA. 
 
-> As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters. 
+- As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters. 
 
-> As an administrator, I would like to search student records based on courses that they are taking or have taken. 
+- As an administrator, I would like to search student records based on courses that they are taking or have taken. 
 
 ## Switching to production mode with a remote database
 The files that need to be modified: 
