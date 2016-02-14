@@ -1,14 +1,20 @@
 # CSCI 3601 Lab #5 - Processing JSON data from Mongo
 
+During this lab you will complete a small project for a hypothetical customer, using all of the tools you have learned in
+other labs. The new thing being introduced in this lab is the Yeoman generator. You will use it to manage laying out your project's basic directory structure and boilerplate details such as routing.
+
+There is no "LABTASKS.md" for this lab, as you will be expected to follow the same agile practices that you will be using on
+your final project.
+
 ## Setup
 - Fork this repository (so that it is easy for us to keep track of your work).
-- Add the initial list of user stories as issues. Prioritize and estimate your stories. 
+- 
 - Use the generator to generate your project (see below).
-- Make sure your applications is called "student". 
-- Move the seed.js into your config directory. 
+- Make sure your applications is called "student".
+- Move the ``seed.js`` file into your config directory. 
 - **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
-- Once you have checked your .gitignore, add your project to the repsoitory and commit. 
-- You will be using your test database (just like we did last time). You will be using a read-only access on a different database for your production code. 
+- Once you have checked your .gitignore, add all the appropriate generated files to the repsoitory and commit. 
+- You will be using a local test database (like in Lab 4). You will also be given read-only access to the customer's database for testing.
 
 ## Using the generator to create your project
 We are using yeoman generator: http://yeoman.io/generators/
@@ -30,15 +36,15 @@ Run: ``yo`` in your project's main directory...
 - Additional oAuth strategies (none, just hit enter)
 - Use Socket.io = ``yes``
 
-## Using generators to add routes to your project
+#### Using generators to add routes to your project
 Do not add routes (i.e. html and Javascript files) by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
 
 
 ## Sample data
-You are provided with sample data that can be used to initialize your test database. Place this file into the/server/config/environment directory, and it will be used to seed your database.
+You are provided with sample data that can be used to initialize your test database. Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
 
 ## User Stories
-You should add these as issues and milestones on your github repository to help keep track of them.
+You should be keeping track of these somehow.
 
 - As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name.
 
@@ -108,7 +114,7 @@ with
     app.use(morgan('dev'));
     app.use(errorHandler()); // Error handler - has to be last
 ```
-- change the file production.js in `/server/config/environment` to look a s follows (but note that the password will be different from `passwordToBeProvided`, it will be sent to you in the google group!)
+- change the file production.js in `/server/config/environment` to look as follows (but note that the password will be different from `passwordToBeProvided`, it will be provided to you at the beginning of the lab)
 ```javascript 
 'use strict';
 
@@ -131,6 +137,6 @@ module.exports = {
   }
 };
 ```
-Make sure that your production.js is in .gitignore before entering the actual password. 
+**Make sure that your production.js is in .gitignore before entering the actual password.**
 
 Once you have made all the changes, you should be able to run the production version by double-clicking on `serveProd` in the list of grunt tasks. **Important:** make sure to stop the `serve` task before starting the `serveProd` task. Note that you can alternate between the development task (with the test database) and the production task (with the remote database). The advantage of the test database is that you can change data in it to test for specific cases.   
