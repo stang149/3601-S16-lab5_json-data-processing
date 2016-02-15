@@ -8,9 +8,8 @@ your final project.
 
 ## Setup
 - Fork this repository (so that it is easy for us to keep track of your work).
-- 
 - Use the generator to generate your project (see below).
-- Make sure your applications is called "student".
+- Make sure your application is called "student".
 - Move the ``seed.js`` file into your config directory. 
 - **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
 - Once you have checked your .gitignore, add all the appropriate generated files to the repsoitory and commit. 
@@ -41,10 +40,22 @@ Do not add routes (i.e. html and Javascript files) by hand. Use the documentatio
 
 
 ## Sample data
-You are provided with sample data that can be used to initialize your test database. Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
+You are provided with sample data that can be used to initialize your test database (located in seed.js). Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
 
 ## User Stories
-You should be keeping track of these somehow.
+You should be keeping track of these throughout the course of the lab (an _iteration_, if you will). Before tearing into completing these stories for the customer, you should _weight_ these stories as a group. That is, you should assign these stories relative values indicating approximately how difficult you feel they will be or how much effort it will take to complete them. Your predictions don't have to be perfect, nor are they expected to be; however, put some real thought into this.
+
+To keep track of progress on the stories throughout the course of the lab, you will use a _burndown chart_. Basically, this is a two-dimensional graph with time on the x-axis and work-remaining on the y-axis. The height of the y-axis will be determined by the total weight of your stories. (ie - if you have 65 points/units of work, your y-axis should probably go up to at least 65.) The x-axis range will correspond to the time you have for the lab; one way to do this is to show the number of days you have to work on it. Both scales should increase by even amounts (they should be linear). The idea behind the burndown chart is that you are able to view your progress as the lab progresses. At the start of the lab *cough* iteration *cough*, your chart will be at the top left. As each unit of time passes (days, class periods, lab periods, whatever), you mark how much remaining weight there is to finish. By the end of the lab, your burndown chart will have a y-value of 0 (no more weight remaining). You and your group can decide how you would like to make this; it could be through Google sheets, a hand-drawn graph, Excel, etc., but you need to be able to turn it in at the end of lab.
+
+>Protip: *DO NOT* wait until the end of the lab to do this. One of the main purposes of a burndown chart is to allow you to see your own progress. We may come around to see interim burndown charts to ensure they are being made properly.
+
+>Protip: Pick a way that works best for your entire team to have access to the burndown chart.
+
+>Protip: Using some basic Mathematics, _shudder_, overall weight divided by overall time can tell you approximately how fast you need to work. The total points that a team feels they can get done when it comes to a regular iteration is referred to as their _velocity_. For this lab, stories are picked such that you are expected to get them all done. When the actual project begins, you and your customer will be deciding what to work on, and you will have to pick up stories with a weight that can be accomplished with what you feel your team's velocity is.
+
+>Protip: Here's a pretty good example of a burndown chart (taken from quora.com): ![Pretty Nifty Example!](https://qph.is.quoracdn.net/main-qimg-350fed6a66aa0879e896d7715eb929f6?convert_to_webp=true)
+
+#### Finally, the stories:
 
 - As an administrator I would like to display a list of all students, ordered alphabetically by last name, first name.
 
