@@ -9,7 +9,7 @@ your final project.
 ## Setup
 - Fork this repository (so that it is easy for us to keep track of your work).
 - Use the generator to generate your project (see below).
-- Make sure your application is called "student".
+- Make sure your application is called "studentsApp".
 - Move the ``seed.js`` file into your config directory, overwriting the default one. 
 - **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
 - Once you have checked your .gitignore, add all the appropriate generated files to the repsoitory and commit. 
@@ -22,8 +22,7 @@ Specifically, the angular-fullstack generator: https://github.com/DaftMonk/gener
 This generator will set up a new project for you with a directory structure quite similar to the one you've been using
 in previous labs, and will make it easier to manage adding new things to your project.
 
-Run: ``yo`` in your project's main directory...
-- Choose generator: ``Angular Fullstack``
+Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Choose Scripting Language: ``Babel``
 - Choose markup Language: ``HTML``
 - Choose Stylesheet Language: ``CSS``
