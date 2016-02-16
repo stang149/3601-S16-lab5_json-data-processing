@@ -35,6 +35,9 @@ Run: ``yo`` in your project's main directory...
 - Additional oAuth strategies (none, just hit enter)
 - Use Socket.io = ``yes``
 
+> Protip: After generating a large project like this, Webstorm will take quite some time to index all the files.
+This process is indicated by the progress bar at the bottom of the screen, and you should wait until it is done to try doing any actual work.
+
 #### Using generators to add routes to your project
 Do not add routes (i.e. html and Javascript files) by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
 
