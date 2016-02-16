@@ -10,7 +10,7 @@ your final project.
 - Fork this repository (so that it is easy for us to keep track of your work).
 - Use the generator to generate your project (see below).
 - Make sure your application is called "student".
-- Move the ``seed.js`` file into your config directory. 
+- Move the ``seed.js`` file into your config directory, overwriting the default one. 
 - **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
 - Once you have checked your .gitignore, add all the appropriate generated files to the repsoitory and commit. 
 - You will be using a local test database (like in Lab 4). You will also be given read-only access to the customer's database for testing.
@@ -24,7 +24,7 @@ in previous labs, and will make it easier to manage adding new things to your pr
 
 Run: ``yo`` in your project's main directory...
 - Choose generator: ``Angular Fullstack``
-- Choose Scripting Language: ``Javascript``
+- Choose Scripting Language: ``Babel``
 - Choose markup Language: ``HTML``
 - Choose Stylesheet Language: ``CSS``
 - Choose Router: ``uiRouter``
@@ -37,7 +37,6 @@ Run: ``yo`` in your project's main directory...
 
 #### Using generators to add routes to your project
 Do not add routes (i.e. html and Javascript files) by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
-
 
 ## Sample data
 You are provided with sample data that can be used to initialize your test database (located in seed.js). Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
