@@ -34,7 +34,7 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Additional oAuth strategies (none, just hit enter)
 - Use Socket.io = ``yes``
 
-> Protip: After generating a large project like this, Webstorm will take quite some time to index all the files.
+> ProTip: After generating a large project like this, Webstorm will take quite some time to index all the files.
 This process is indicated by the progress bar at the bottom of the screen, and you should wait until it is done to try doing any actual work.
 
 #### Using generators to add routes to your project
@@ -42,6 +42,12 @@ Do not add routes (i.e. html and Javascript files) by hand. Use the documentatio
 
 ## Sample data
 You are provided with sample data that can be used to initialize your test database (located in seed.js). Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
+
+## Testing
+There are a lot of tests written for you by the generator, which include tests for the database API and routing. Some of these
+can fail if you run them as the same time as you have the project served.
+
+> ProTip: Read the documentation for the angular-fullstack generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
 
 ## User Stories
 You should be keeping track of these throughout the course of the lab (an _iteration_, if you will). Before tearing into completing these stories for the customer, you should _weight_ these stories as a group. That is, you should assign these stories relative values indicating approximately how difficult you feel they will be or how much effort it will take to complete them. Your predictions don't have to be perfect, nor are they expected to be; however, put some real thought into this.
