@@ -13,6 +13,9 @@ your final project.
 - Move the ``seed.js`` file into your config directory, overwriting the default one. 
 - **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
 - Once you have checked your .gitignore, add all the appropriate generated files to the repository and commit. 
+
+> Protip: You can add all the files at once by right-clicking the top directory for the project, going to Git>, selecting Add. (or ctrl+alt+A).
+
 - You will be using a local test database (like in Lab 4). You will also be given read-only access to the customer's database for testing.
 
 ## Using the generator to create your project
