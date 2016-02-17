@@ -51,10 +51,13 @@ You are provided with sample data that can be used to initialize your test datab
 
 ## Testing
 There are a lot of tests written for you by the generator, which include tests for the database API and routing. Some of these
-can fail if you run them as the same time as you have the project served.
+can fail if you run them at the same time as when you have the project served.
+
+As always, you should be following a TDD approach and writing tests for your application as you go. This means, you should get Travis-CI running for the project early on.
 
 > Protip: READ THE DOCUMENTATION FOR THE ANGULAR-FULLSTACK GENERATOR. For real this time.
 
+> Protip: A .travis.yml file is made for you now by the generator, so you shouldn't need to deal with that aspect of setting up Travis.
 
 ## User Stories
 You should be keeping track of these throughout the course of the lab (an _iteration_, if you will). Before tearing into completing these stories for the customer, you should _weight_ these stories as a group. That is, you should assign these stories relative values indicating approximately how difficult you feel they will be or how much effort it will take to complete them. Your predictions don't have to be perfect, nor are they expected to be; however, put some real thought into this.
