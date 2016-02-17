@@ -43,7 +43,7 @@ This process is indicated by the progress bar at the bottom of the screen, and y
 #### Using generators to add things to your project
 Do not add routes, views, endpoints, api stuff, or anything else, by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
 
-> Protip: Read the documentation for the angular-fullstack generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
+> Protip: Read the documentation for the angular-fullstack generator, which can be found in the README.md for the repository containing the generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
 
 
 ## Sample data
