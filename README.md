@@ -33,14 +33,17 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Scaffold authentication boilerplate = ``yes``
 - Additional oAuth strategies (none, just hit enter)
 - Use Socket.io = ``yes``
+- Use Gulp or Grunt: ``Grunt``
+- Write test with? ``Jasmine``
+- Overwrite README.md? ``no``
 
-> ProTip: After generating a large project like this, Webstorm will take quite some time to index all the files.
+> Protip: After generating a large project like this, Webstorm will take quite some time to index all the files.
 This process is indicated by the progress bar at the bottom of the screen, and you should wait until it is done to try doing any actual work.
 
 #### Using generators to add things to your project
 Do not add routes, views, endpoints, api stuff, or anything else, by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
 
-> ProTip: Read the documentation for the angular-fullstack generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
+> Protip: Read the documentation for the angular-fullstack generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
 
 
 ## Sample data
@@ -50,7 +53,7 @@ You are provided with sample data that can be used to initialize your test datab
 There are a lot of tests written for you by the generator, which include tests for the database API and routing. Some of these
 can fail if you run them as the same time as you have the project served.
 
-> ProTip: READ THE DOCUMENTATION FOR THE ANGULAR-FULLSTACK GENERATOR. For real this time.
+> Protip: READ THE DOCUMENTATION FOR THE ANGULAR-FULLSTACK GENERATOR. For real this time.
 
 
 ## User Stories
