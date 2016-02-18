@@ -95,6 +95,9 @@ To keep track of progress on the stories throughout the course of the lab, you w
 - As an administrator, I would like to search student records based on courses that they are taking or have taken. 
 
 ## Switching to production mode with a remote database
+In their infinite wisdom, your customer has decided to give you access to their live student database in order
+to test your application more thuroughly. In order to set this up in a reasonable way, take the following steps:
+
 The files that need to be modified: 
 
 - Starting on line 515 of `Gruntfile.js` change the code block to:
