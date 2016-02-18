@@ -45,6 +45,8 @@ Do not add routes, views, endpoints, api stuff, or anything else, by hand. Use t
 
 > Protip: Read the documentation for the angular-fullstack generator, which can be found in the README.md for the repository containing the generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
 
+You will need to generate a new endpoint using `yo angular-fullstack:endpoint student`
+
 
 ## Sample data
 You are provided with sample data that can be used to initialize your test database (located in seed.js). Place this file into the/server/config/environment directory, and it will be used to seed your local test database.
