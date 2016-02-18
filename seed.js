@@ -1,13 +1,12 @@
 /**
  * Populate DB with sample data on server start
- * to disable, edit config/environment/index.js, and set `seedDB: false`
+ * to disable, edit config/environment/development.js, and set `seedDB: false`
  */
 
 'use strict';
+import Student from '../api/student/student.model';
 
-var Student = require('../api/student/student.model');
-
-Student.find({}).remove(function() {
+Student.find({}).removeAsync().then(() => {
   Student.create(
       {
         "firstName": "Love",
