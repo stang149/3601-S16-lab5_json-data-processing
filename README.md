@@ -11,12 +11,10 @@ your final project.
 - Use the generator to generate your project (see below).
 - Make sure your application is called "studentsApp".
 - Move the ``seed.js`` file into your config directory, overwriting the default one. 
-- **Make sure that your .gitignore contains the .idea, /server/config/environment/production.js, etc. Use past .gitignore for reference.**
+- Add `server/config/environment/customerProd.js` to your .gitignore
 - Once you have checked your .gitignore, add all the appropriate generated files to the repository and commit. 
 
 > Protip: You can add all the files at once by right-clicking the top directory for the project, going to Git>, selecting Add. (or ctrl+alt+A).
-
-- You will be using a local test database (like in Lab 4). You will also be given read-only access to the customer's database for testing.
 
 ## Using the generator to create your project
 We are using yeoman generator: http://yeoman.io/generators/
@@ -33,8 +31,7 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Use Bootstrap = ``yes``
 - Include UI Bootstrap = ``yes``
 - Use mongoDB with Mongoose = ``yes``
-- Scaffold authentication boilerplate = ``yes``
-- Additional oAuth strategies (none, just hit enter)
+- Scaffold authentication boilerplate = ``no``
 - Use Socket.io = ``yes``
 - Use Gulp or Grunt: ``Grunt``
 - Write test with? ``Jasmine``
@@ -98,24 +95,34 @@ To keep track of progress on the stories throughout the course of the lab, you w
 ## Switching to production mode with a remote database
 The files that need to be modified: 
 
-- server-side app.js: change the line 
+- Starting on line 515 of `Gruntfile.js` change the code block to:
 ```javascript
-serveClient: (config.env === 'production') ? false : true,
+      env: {
+      test: {
+        NODE_ENV: 'test'
+      },
+      prod: {
+        NODE_ENV: 'production'
+      },
+      cProd: {
+        NODE_ENV: 'customerProd'
+      },
+      all: localConfig
+    },
 ```
-to
-```javascript
-serveClient: true,
-```
+
 - add the following new task to Gruntfile.js, after the other registered tasks:
 ```javascipt
-  grunt.registerTask('serveProd', function (target) {
+  grunt.registerTask('customerProd', function (target) {
     grunt.task.run([
       'clean:server',
-      'env:prod',
+      'env:all',
+      'env:cProd',
+      'concurrent:pre',
       'concurrent:server',
       'injector',
-      'wiredep',
-      'autoprefixer',
+      'wiredep:client',
+      'postcss',
       'express:dev',
       'wait',
       'open',
@@ -123,46 +130,13 @@ serveClient: true,
     ]);
   });
 ```
-This will adda  new task `serveProd` to your grunt tasks, so you will be able to run it from the grunt menu, just like `serve`. 
+This will adda  new task `customnerProd` to your grunt tasks, so you will be able to run it from the grunt menu, just like `serve`. 
 - change express.js as follows:
-in the `if` statement
-```javascript 
-if ('production' === env)
-```
-replace the lines
-```javascript 
-    app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(config.root, 'public')));
-    app.set('appPath', config.root + '/public');
-    app.use(morgan('dev'));
-```
-with
-```javascript 
-    app.use(require('connect-livereload')());
-    app.use(express.static(path.join(config.root, '.tmp')));
-    app.use(express.static(path.join(config.root, 'client')));
-    app.set('appPath', 'client');
-    app.use(morgan('dev'));
-    app.use(errorHandler()); // Error handler - has to be last
-```
-- change the file production.js in `/server/config/environment` to look as follows (but note that the password will be different from `passwordToBeProvided`, it will be provided to you at the beginning of the lab)
+add `|| 'customerProd === env'` to the if statments on lines 75 and 79
+
+- change the file customerProd.js in `/server/config/environment` to look as follows (but note that the password will be different from `passwordToBeProvided`, it will be provided to you at the beginning of the lab)
 ```javascript 
 'use strict';
-
-// Production specific configuration
-// =================================
-module.exports = {
-  //// Server IP
-  //ip:       process.env.OPENSHIFT_NODEJS_IP ||
-  //          process.env.IP ||
-  //          undefined,
-  //
-  //// Server port
-  //port:     process.env.OPENSHIFT_NODEJS_PORT ||
-  //          process.env.PORT ||
-  //          8080,
-
-  // MongoDB connection options
   mongo: {
     uri: 'mongodb://3601Lab:passwordToBeProvided@acrylic/softwareDev/?authSource=admin'
   }
