@@ -35,7 +35,7 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Use Socket.io = ``yes``
 - Use Gulp or Grunt: ``Grunt``
 - Write test with? ``Jasmine``
-- Overwrite README.md? ``no``
+- Overwrite README.md? ``no`` 
 
 > Protip: After generating a large project like this, Webstorm will take quite some time to index all the files.
 This process is indicated by the progress bar at the bottom of the screen, and you should wait until it is done to try doing any actual work.
