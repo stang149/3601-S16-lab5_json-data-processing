@@ -33,7 +33,7 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 - Use mongoDB with Mongoose = ``yes``
 - Scaffold authentication boilerplate = ``no``
 - Use Socket.io = ``yes``
-- Use Gulp or Grunt: ``Grunt``
+- Use Gulp or Grunt: ``Grunt`` 
 - Write test with? ``Jasmine``
 - Overwrite README.md? ``no`` 
 
